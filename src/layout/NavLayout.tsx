@@ -5,7 +5,11 @@ const NavLayout = () => {
   return (
     <>
       <NavBar />
-      <Outlet />
+      <div className="px-4 md:px-20">
+        <div className="max-w-[1440px] mx-auto">
+          <Outlet />
+        </div>
+      </div>
     </>
   );
 };
