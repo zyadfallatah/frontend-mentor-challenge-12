@@ -1,6 +1,6 @@
 const SerachBar = () => {
   return (
-    <div className="flex items-center md:max-w-[480px] bg-white-color dark:bg-dark-color px-8 mt-6 gap-6 rounded-[5px]">
+    <div className="flex items-center md:max-w-[480px] bg-white-color dark:bg-dark-color px-8 gap-6 rounded-[5px]">
       <svg
         width="18"
         height="18"

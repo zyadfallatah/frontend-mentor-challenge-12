@@ -1,9 +1,9 @@
-import SerachBar from "../components/SerachBar";
+import Filters from "../components/Filters";
 
 const Countries = () => {
   return (
     <>
-      <SerachBar />
+      <Filters />
     </>
   );
 };
