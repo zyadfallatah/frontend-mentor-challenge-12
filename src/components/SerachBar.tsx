@@ -1,4 +1,8 @@
+import { useFilters } from "../hooks/useFilters";
+
 const SerachBar = () => {
+  const setSearch = useFilters((state) => state.setSearch);
+
   return (
     <div className="flex items-center md:max-w-[480px] bg-white-color dark:bg-dark-color px-8 gap-6 rounded-[5px]">
       <svg
@@ -20,6 +24,7 @@ const SerachBar = () => {
         placeholder="Search for a country…"
         className="w-full block text-[12px] md:text-sm min-h-12 outline-0 bg-white-color dark:bg-dark-color
         dark:text-white-color "
+        onChange={(e) => setSearch(e.target.value)}
       />
     </div>
   );
