@@ -11,12 +11,17 @@ import "./index.css";
 
 import Countries from "./pages/Countries";
 import NavLayout from "./layout/NavLayout";
+import CountryDetails from "./pages/CountryDetails";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/frontend-mentor-challenge-12" element={<NavLayout />}>
       <Route index element={<Countries />} />
+      <Route
+        path="/frontend-mentor-challenge-12/:countryName"
+        element={<CountryDetails />}
+      />
     </Route>
   )
 );
