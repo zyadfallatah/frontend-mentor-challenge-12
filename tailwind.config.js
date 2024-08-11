@@ -11,6 +11,9 @@ export default {
         "white-color": "hsl(0, 0, 100)",
         "black-color": "hsl(200, 15, 8)",
       },
+      gridTemplateColumns: {
+        "auto-4": "repeat(auto-fit, minmax(250px, 1fr))",
+      },
     },
   },
   plugins: [],
