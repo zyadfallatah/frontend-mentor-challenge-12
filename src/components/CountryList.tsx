@@ -8,7 +8,7 @@ const CountryList = () => {
 
   if (isLoading) return <h1>Loading...</h1>;
   return (
-    <main className="grid gap-10 lg:gap-20 grid-cols-auto-4 mt-12 px-10 lg:px-0">
+    <main className="grid gap-10 lg:gap-20 md:grid-cols-2 xl:grid-cols-4 mt-12 px-10 lg:px-0">
       {data!
         .filter(
           (country) =>
