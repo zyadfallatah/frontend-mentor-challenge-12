@@ -1,7 +1,7 @@
 import CountryList from "../components/CountryList";
 import Filters from "../components/Filters";
 
-const Countries = () => {
+const CountriesPage = () => {
   return (
     <>
       <Filters />
@@ -10,4 +10,4 @@ const Countries = () => {
   );
 };
 
-export default Countries;
+export default CountriesPage;
