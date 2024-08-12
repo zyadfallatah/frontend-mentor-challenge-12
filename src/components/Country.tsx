@@ -7,7 +7,7 @@ const Country = ({ country }: { country: CountrySchema }) => {
     <Link to={`/frontend-mentor-challenge-12/${country.name.official}`}>
       <div
         className="bg-white-color dark:bg-dark-color text-dark-color dark:text-white-color min-h-[336px] rounded-b-[5px]
-    cursor-pointer"
+    cursor-pointer shadow-lg"
       >
         <img
           className=" w-full h-[10rem] object-cover rounded-t-[5px]"
