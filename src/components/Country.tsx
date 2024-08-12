@@ -18,7 +18,7 @@ const Country = ({ country }: { country: CountrySchema }) => {
           <h2 className="text-[18px] font-extrabold leading-5 mb-4">
             {country.name.official}
           </h2>
-          <div className="text-sm">
+          <div className="text-sm space-y-2">
             <CountryInfo title="Population" info={country.population} />
             <CountryInfo title="Region" info={country.region} />
             <CountryInfo title="Capital" info={country.capital} />

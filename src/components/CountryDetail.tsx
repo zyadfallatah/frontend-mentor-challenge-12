@@ -19,14 +19,14 @@ const CountryDetail = ({ country }: { country: CountrySchema }) => {
           {country.name.official}
         </h1>
         <div className="flex flex-col gap-8 xl:flex-row xl:justify-evenly text-sm lg:text-[18px]">
-          <div>
+          <div className="space-y-2 lg:space-y-5">
             <CountryInfo title="Native Name" info={country.name.official} />
             <CountryInfo title="Population" info={country.population} />
             <CountryInfo title="Region" info={country.region} />
             <CountryInfo title="Sub Region" info={country.subregion!} />
             <CountryInfo title="Capital" info={country.capital} />
           </div>
-          <div>
+          <div className="space-y-2 lg:space-y-5">
             <CountryInfo title="Top Level Domain" info={country.cca2} />
             <CountryInfo
               title="Currencies"
