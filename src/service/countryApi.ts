@@ -11,7 +11,8 @@ export type CountrySchema = {
   subregion?: string;
   currencies: { currency: { name: string } };
   languages: object;
-  border?: string[];
+  borders?: string[];
+  cca2: string;
 };
 
 export const useCountry = function (countryName: string) {

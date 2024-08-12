@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CountrySchema } from "../service/countryApi";
+import CountryInfo from "./CountryInfo";
 
 const Country = ({ country }: { country: CountrySchema }) => {
   return (
@@ -18,18 +19,9 @@ const Country = ({ country }: { country: CountrySchema }) => {
             {country.name.official}
           </h2>
           <div className="text-sm">
-            <p>
-              <b>Population: </b>
-              {country.population}
-            </p>
-            <p>
-              <b>Region: </b>
-              {country.region}
-            </p>
-            <p>
-              <b>Capital: </b>
-              {country.capital}
-            </p>
+            <CountryInfo title="Population" info={country.population} />
+            <CountryInfo title="Region" info={country.region} />
+            <CountryInfo title="Capital" info={country.capital} />
           </div>
         </div>
       </div>
