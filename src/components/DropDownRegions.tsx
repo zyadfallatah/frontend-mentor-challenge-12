@@ -1,5 +1,4 @@
 import { useState } from "react";
-import arrow from "../assets/arrow.svg";
 import Region from "./Region";
 import { useFilters } from "../hooks/useFilters";
 const DropDownRegions = () => {
