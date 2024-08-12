@@ -45,11 +45,16 @@ const CountryDetail = ({ country }: { country: CountrySchema }) => {
         </div>
         <div className="flex flex-col xl:flex-row xl:items-center gap-4">
           <h3 className="text-[1rem] ">Border Countries: </h3>
-          <div className="max-w-[400px] flex flex-wrap gap-[10px] xl:justify-between">
+          <div className="max-w-[400px] flex flex-wrap gap-[10px]">
+            {!country.borders && (
+              <span className="text-red-400">
+                No Borders With {country.name.official}
+              </span>
+            )}
             {country.borders?.map((border, index) => {
               return (
                 <span
-                  className="text-center min-w-24 min-h-7 bg-white-color dark:bg-dark-color shadow-sm"
+                  className="text-center min-w-24 py-[2px] bg-white-color dark:bg-dark-color shadow-sm"
                   key={index}
                 >
                   {border}
