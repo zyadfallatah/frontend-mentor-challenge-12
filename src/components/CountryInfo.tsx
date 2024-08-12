@@ -6,7 +6,7 @@ const CountryInfo = ({
   info: string | number | string[];
 }) => {
   return (
-    <p className="font-light text-black-color dark:text-white-color mb-5">
+    <p className="font-light text-black-color dark:text-white-color mb-2">
       <b className="font-semibold">{title}: </b>
       {info}
     </p>
