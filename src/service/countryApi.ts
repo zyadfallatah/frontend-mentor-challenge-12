@@ -15,6 +15,23 @@ export type CountrySchema = {
   cca2: string;
 };
 
+export const useCountryCode = function (countryCode: string) {
+  const query = useQuery({
+    queryKey: ["Country", countryCode],
+    queryFn: async () => {
+      return await axios
+        .get<CountrySchema[]>(
+          `https://restcountries.com/v3.1/alpha/${countryCode}`
+        )
+        .then((res) => {
+          return res.data;
+        });
+    },
+  });
+
+  return query;
+};
+
 export const useCountry = function (countryName: string) {
   const query = useQuery({
     queryKey: ["Country", countryName],

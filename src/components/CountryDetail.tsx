@@ -1,5 +1,6 @@
 import { CountrySchema } from "../service/countryApi";
 import CountryInfo from "./CountryInfo";
+import CountryCodeLink from "./CountryCodeLink";
 
 const getUnknownObjectValues = function (object: object) {
   return Object.values(object);
@@ -52,14 +53,7 @@ const CountryDetail = ({ country }: { country: CountrySchema }) => {
               </span>
             )}
             {country.borders?.map((border, index) => {
-              return (
-                <span
-                  className="text-center min-w-24 py-[2px] bg-white-color dark:bg-dark-color shadow-sm"
-                  key={index}
-                >
-                  {border}
-                </span>
-              );
+              return <CountryCodeLink countryCode={border} key={index} />;
             })}
           </div>
         </div>
