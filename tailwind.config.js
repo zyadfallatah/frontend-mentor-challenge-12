@@ -11,6 +11,9 @@ export default {
         "white-color": "hsl(0, 0, 100)",
         "black-color": "hsl(200, 15, 8)",
       },
+      animation: {
+        "slide-down": "slide-down 800ms",
+      },
     },
   },
   plugins: [],

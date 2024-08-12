@@ -15,7 +15,7 @@ const DropDownRegions = () => {
         {region === "" ? "Filter by Region" : region}
       </h3>
       <svg
-        className={isDropDownOpen ? "rotate-90" : ""}
+        className={`duration-500 ${isDropDownOpen ? "rotate-180" : ""}`}
         width="9"
         height="7"
         viewBox="0 0 9 7"
@@ -35,8 +35,8 @@ const DropDownRegions = () => {
 
       {isDropDownOpen && (
         <div
-          className="absolute w-full left-0 top-[4rem] bg-white-color 
-        dark:bg-dark-color dark:text-white-color px-6 py-4 space-y-2 rounded-[5px]"
+          className="absolute animate-slide-down w-full left-0 top-[4rem] bg-white-color 
+        dark:bg-dark-color dark:text-white-color space-y-2 rounded-[5px]"
         >
           <Region name="Africa" onClick={() => setIsDropDownOpen(false)} />
           <Region name="Americas" onClick={() => setIsDropDownOpen(false)} />

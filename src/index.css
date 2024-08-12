@@ -7,3 +7,16 @@
 *::after {
   font-family: "Nunito Sans", sans-serif;
 }
+
+@keyframes slide-down {
+  0% {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-50%);
+    z-index: -1000;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
