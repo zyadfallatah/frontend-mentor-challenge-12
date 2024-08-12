@@ -11,7 +11,8 @@ const Region = ({
   const { setRegion } = useFilters();
   return (
     <div
-      className="text-[12px] md:text-sm cursor-pointer duration-200 px-6 py-2 hover:text-blue-400 hover:bg-dark-color dark:hover:bg-white-color"
+      className="text-[12px] md:text-sm cursor-pointer duration-200 px-6 py-2 
+      hover:text-white-color dark:hover:text-dark-color hover:bg-dark-color dark:hover:bg-white-color"
       onClick={(e) => {
         onClick(e);
         setRegion(name);
