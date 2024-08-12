@@ -7,6 +7,8 @@ const getUnknownObjectValues = function (object: object) {
 };
 
 const CountryDetail = ({ country }: { country: CountrySchema }) => {
+  const isCountryWithBorders = country.borders !== undefined;
+
   return (
     <div className="flex flex-col items-center lg:flex-row gap-11 xl:gap-36 mt-16 text-dark-color dark:text-white-color">
       <img
@@ -47,14 +49,15 @@ const CountryDetail = ({ country }: { country: CountrySchema }) => {
         <div className="flex flex-col xl:flex-row xl:items-center gap-4">
           <h3 className="text-[1rem] ">Border Countries: </h3>
           <div className="max-w-[400px] flex flex-wrap gap-[10px]">
-            {!country.borders && (
+            {isCountryWithBorders ? (
+              country.borders?.map((border, index) => {
+                return <CountryCodeLink countryCode={border} key={index} />;
+              })
+            ) : (
               <span className="text-red-400">
                 No Borders With {country.name.official}
               </span>
             )}
-            {country.borders?.map((border, index) => {
-              return <CountryCodeLink countryCode={border} key={index} />;
-            })}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export type CountrySchema = {
   population: number;
   region: string;
   capital: string;
-  name: { official: string };
+  name: { official: string; common: string };
   flags: { png: string; svg: string };
   subregion?: string;
   currencies: { currency: { name: string } };
