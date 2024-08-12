@@ -3,7 +3,7 @@ import Region from "./Region";
 import { useFilters } from "../hooks/useFilters";
 const DropDownRegions = () => {
   const { region } = useFilters();
-  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(true);
 
   return (
     <div
