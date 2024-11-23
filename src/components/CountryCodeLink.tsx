@@ -8,7 +8,7 @@ const CountryCodeLink = ({ countryCode }: { countryCode: string }) => {
 
   return (
     <Link
-      to={`/frontend-mentor-challenge-12/${country.name.official}`}
+      to={`/${country.name.official}`}
       className="text-center min-w-24 py-[2px] bg-white-color dark:bg-dark-color shadow-sm"
     >
       {country.name.common}
