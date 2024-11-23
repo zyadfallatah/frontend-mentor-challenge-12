@@ -16,12 +16,9 @@ import CountryDetailsPage from "./pages/CountryDetailsPage";
 const queryClient = new QueryClient();
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/frontend-mentor-challenge-12" element={<NavLayout />}>
+    <Route path="/" element={<NavLayout />}>
       <Route index element={<CountriesPage />} />
-      <Route
-        path="/frontend-mentor-challenge-12/:countryName"
-        element={<CountryDetailsPage />}
-      />
+      <Route path="/:countryName" element={<CountryDetailsPage />} />
     </Route>
   )
 );
@@ -33,3 +30,4 @@ createRoot(document.getElementById("root")!).render(
     </QueryClientProvider>
   </StrictMode>
 );
+// awdwd

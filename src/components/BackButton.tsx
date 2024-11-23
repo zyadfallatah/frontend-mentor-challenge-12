@@ -5,7 +5,7 @@ const BackButton = () => {
     <Link
       className="flex gap-2 items-center w-fit px-6 py-1 text-sm font-light bg-white-color dark:bg-dark-color 
     text-dark-alt-color dark:text-light-color rounded-sm"
-      to="/frontend-mentor-challenge-12"
+      to="/"
     >
       <svg
         width="18"
